@@ -61,7 +61,7 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             String price = googlePlace.get("price_level");
             LatLng latLng = new LatLng(lat, lng);
             markerOptions.position(latLng);
-            markerOptions.title(price + " " + placeName + " : " + vicinity);
+            markerOptions.title("$" + price + " " + placeName + " : " + vicinity);
             mMap.addMarker(markerOptions);
             markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
             //move map camera

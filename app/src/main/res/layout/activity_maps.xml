@@ -4,7 +4,9 @@
 
     android:layout_height="match_parent"
 
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <fragment android:id="@+id/map"
 
@@ -34,46 +36,246 @@
 
         <Button
 
-            android:id="@+id/btnRestaurant"
+            android:id="@+id/btnBack"
 
             android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
 
-            android:text="Nearby Restaurants" />
-
-        <Button
-
-            android:id="@+id/btnHospital"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:text="Nearby Hospitals" />
-
-        <Button
-
-            android:id="@+id/btnSchool"
-
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-
-            android:text="Nearby Schools" />
+            android:text="Back" />
 
 
-        <TextView
-            android:id="@+id/displayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/holo_red_light"
-            android:text="Hello World!" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"></LinearLayout>
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.matthew.plan.MainActivity"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="0dp">
+
+
+        <CheckBox
+            android:id="@+id/checkBox32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Spa"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox31"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox31"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="spaCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zoo"
+            android:buttonTint="@color/colorPrimaryDark"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox32"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox32"
+            tools:layout_constraintTop_creator="1"
+            tools:text="zooCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Restaurant"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox30"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox30"
+            tools:layout_constraintTop_creator="1"
+            tools:text="restaurantCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Casino"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox8"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox8"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="casinoCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Aquarium"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox4"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="aquariumCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Camping Grounds"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox2"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="campgroundCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="107dp"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Amusement Park"
+            android:textColorLink="@color/colorPrimaryDark"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="aPCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Art Gallery"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox7"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox7"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="galleryCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Gym"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox6"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox6"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="gymCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Bowling Alley"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox5"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox5"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="bowlingAlleyCheckBox" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="5dp"
+            android:text="Select preferred events for the evening:"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="introTextBox"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/checkBox22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Night Club"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox39"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox39"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="nightClubCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Park"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox22"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox22"
+            tools:layout_constraintTop_creator="1"
+            tools:text="parkCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="18dp"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Movie Theatre"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="movieCheckBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Museum"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBox38"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox38"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1"
+            tools:text="museumCheckBox" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="Find Events"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="-34dp"
+            tools:text="searchButton" />
+
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>
